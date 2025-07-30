@@ -3,22 +3,29 @@ languageCode = 'en-US'
 title = 'My New Hugo Site'
 
 [menus]
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
 
-  [[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
-    weight = 20
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
 
-  [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 30
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
 
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = '0.146.0'
+[module.hugoVersion]
+extended = true
+min = '0.146.0'
+
+[build]
+writeStats = true
+
+[security]
+[security.exec]
+allow = ['^tailwindcss$'] # 允许 Hugo 执行 Tailwind CLI

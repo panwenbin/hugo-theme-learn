@@ -1,0 +1,3 @@
+{{ with resources.Get "css/tailwind.css" | css.TailwindCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
